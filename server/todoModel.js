@@ -4,12 +4,14 @@ const pool = new Pool({
   connectionString: connectString
 });
 
-/* 
-  DB Schema:
-    table = todo
-      - id (primary key)
-      - name (string)
-      - done (boolean)
+/*
+Create a table in postgreSQL like this:
+
+CREATE TABLE todo (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR ( 255 ) NOT NULL,
+    done BOOLEAN NOT NULL
+);
 */
 
 module.exports = {

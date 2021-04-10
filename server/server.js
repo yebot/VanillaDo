@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Define route handlers
+// Route handler for all requests at /api
 app.use('/api', todoRouter);
 
 // Catch-all route handler for any requests to an unknown route
