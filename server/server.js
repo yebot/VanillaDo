@@ -1,9 +1,13 @@
 const dotenv = require('dotenv').config();
+const cors = require('cors');
 const express = require('express');
 const todoRouter = require('./todoRouter.js');
 
 // Initiate app 
 const app = express();
+
+// use CORS
+app.use(cors());
 
 // Handle parsing request body
 app.use(express.json());
